@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content=" "> 
+
+  
+  <title> Free Video Courses - AV computer education</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+
+  
+  <link rel="stylesheet" href="css/index.css">
+
+
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html"><img class="brandLogo" src="images/logo.jpg" alt="My image"></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item font-weight-bold">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item font-weight-bold">
+          <a class="nav-link" href="video.html">Videos</a>
+        </li>
+
+        <li class="nav-item font-weight-bold">
+          <a class="nav-link" href="blog.html">Blog</a>
+        </li>
+
+        <li class="nav-item font-weight-bold">
+          <a class="nav-link" href="contact.html">Contact Me</a>
+        </li>
+      </ul>
+
+      <form class="form-inline my-2 my-lg-0 mr-3" method="get" action="/search/">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query">
+        <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
+
+      </form>
+      
+      <div>
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#loginModal">Login</button>
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#signupModal">SignUp</button>
+      </div>
+      
+    </div>
+
+  </nav>
+  
+  
+  <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModal">Login using your credentials</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form action="/profile/login" method='post'><input type="hidden" name="csrfmiddlewaretoken" value="tq41X63WM2l0EXfd5ifXFqpVe5zIq1bbznLFAwv1imnmMTyMlCHwcFUG0kM81jo3">
+                    <div class="form-group">
+                        <label for="lusername">Username</label>
+                        <input type="name" class="form-control" id="luname" placeholder="Enter your username"
+                            name="uname">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="lpassword" placeholder="Enter your password"
+                            name="password">
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LdvcqwUAAAAACmPYNVoiJA7D84xLSQQt5g9p10m"></div>
+                    <input type="hidden" name="path" value="/videos/">
+
+                    <button type="submit" class="btn btn-danger mt-2" id="loginsubmit">Login</button>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+  <!-- SignUp Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModal">SignUp for an account</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form name="contact" method="post" action="/profile/signup"><input type="hidden" name="csrfmiddlewaretoken" value="tq41X63WM2l0EXfd5ifXFqpVe5zIq1bbznLFAwv1imnmMTyMlCHwcFUG0kM81jo3">
+
+          <div class="form-group">
+            <label for="uname">Username</label>
+            <input type="text" class="form-control" id="uname" placeholder="Enter your Name" name="uname">
+            <small id="unamehelp" class="form-text text-muted px-1">
+              Your unique username must be less than 10 characters (only lowecase letters, numbers & underscores
+              allowed) with no spaces
+            </small>
+          </div>
+          <div class="form-group">
+            <label for="name">First Name</label>
+            <input type="text" class="form-control" id="fname" placeholder="Enter your First Name" name="fname">
+          </div>
+          <div class="form-group">
+            <label for="name">Last Name</label>
+            <input type="text" class="form-control" id="lname" placeholder="Enter your Last Name" name="lname">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <div class="mx-0">
+              <div class="col-md-8 px-0">
+                <input type="email" class="form-control" id="email" placeholder="Enter your Email" name="email">
+                <small id="otpMessage" class="form-text"></small>
+              </div>
+              <div class="col-md-4 my-1 px-0">
+                <button class="btn btn-danger btn-sm mt-2" id="otpbtn">Send OTP</button>
+              </div>
+            </div>
+
+          </div>
+          <div class="form-group">
+            <label for="otp">Enter OTP</label>
+            <input type="text" class="form-control" id="otp" placeholder="Enter OTP" name="otp">
+          </div>
+
+          <div class="form-group">
+            <label for="password">Choose a password</label>
+            <input type="password" class="form-control" id="password" placeholder="Choose a password" name="password">
+          </div>
+          <div class="form-group">
+            <label for="password2">Retype a password</label>
+            <input type="password" class="form-control" id="password2" placeholder="Retype your password"
+              name="password2">
+          </div>
+          <div class="g-recaptcha" data-sitekey="6LdvcqwUAAAAACmPYNVoiJA7D84xLSQQt5g9p10m"></div>
+          <input type="hidden" name="path" value="/videos/">
+          <button type="submit" class="btn btn-danger mt-2">SignUp</button>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+<div class="container-fluid main-container">
+    <div class="row my-4 mx-4">
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="images/autocad.png" width="140" height="140">
+                <h2>Autocad Tutorials For Absolute Beginners In Hindi</h2>
+                <p>
+                    In this series, we will learn about Autocad Tutorials For Absolute Beginners In Hindi
+                </p>
+                <p>
+                    
+                        <a href="Autocad/page1.html"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/java.png" width="140" height="140">
+                <h2>Java Tutorials For Beginners</h2>
+                <p>
+                    In this series, we will learn about This series will cover Java from starting to the end. We will learn java from the start to the end
+                </p>
+                <p>
+                    
+                        <a href="java-tutorials-for-beginners-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/django.png" width="140" height="140">
+                <h2>Python Django Tutorials In Hindi</h2>
+                <p>
+                    In this series, we will learn about Python Django Tutorials In Hindi
+                </p>
+                <p>
+                    
+                        <a href="python-django-tutorials-hindi-0"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/algo_HGtKbPH.png" width="140" height="140">
+                <h2>Data Structures and Algorithms Course in Hindi</h2>
+                <p>
+                    In this series, we will learn about Data Structures and algorithms course
+                </p>
+                <p>
+                    
+                        <a href="data-structures-and-algorithms-in-hindi-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/default.png" width="140" height="140">
+                <h2>Python Practice Programs With Logic &amp; Explanation In Hindi</h2>
+                <p>
+                    In this series, we will learn about Python Practice Programs With Logic &amp; Explanation In Hindi
+                </p>
+                <p>
+                    
+                        <a href="python-practice-programs-in-hindi-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/world-wide-web.png" width="140" height="140">
+                <h2>Web Development Tutorials For Beginners In Hindi: HTML, CSS, JavaScript &amp; More</h2>
+                <p>
+                    In this series, we will learn about Web Development Tutorials For Beginners In Hindi: HTML, CSS, JavaScript &amp; More
+                </p>
+                <p>
+                    
+                        <a href="web-development-in-hindi-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/android_eJ3rhzN.png" width="140" height="140">
+                <h2>Android Development Tutorials In Hindi</h2>
+                <p>
+                    In this series, we will learn about Learn to create awesome android applications in hindi
+                </p>
+                <p>
+                    
+                        <a href="android-tutorials-in-hindi-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/c_r8wWuCn.png" width="140" height="140">
+                <h2>C Language Tutorials In Hindi</h2>
+                <p>
+                    In this series, we will learn about C Language Tutorials In Hindi
+                </p>
+                <p>
+                    
+                        <a href="c-language-tutorials-in-hindi-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/php_HVsSGgg.png" width="140" height="140">
+                <h2>PHP Tutorials in Hindi</h2>
+                <p>
+                    In this series, we will learn about PHP Tutorials in Hindi
+                </p>
+                <p>
+                    
+                        <a href="php-tutorials-in-hindi-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/cpp.png" width="140" height="140">
+                <h2>C++ Tutorials In Hindi</h2>
+                <p>
+                    In this series, we will learn about C++ Tutorials In Hindi
+                </p>
+                <p>
+                    
+                        <a href="cpp-tutorials-in-hindi-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/pygame.png" width="140" height="140">
+                <h2>Python Game Development Using Pygame In Hindi</h2>
+                <p>
+                    In this series, we will learn about Python Game Development Using Pygame In Hindi
+                </p>
+                <p>
+                    
+                        <a href="python-game-development-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/flas_jdzfxKn.png" width="140" height="140">
+                <h2>Web Development Using Flask and Python</h2>
+                <p>
+                    In this series, we will learn about Web Development Using Flask and Python
+                </p>
+                <p>
+                    
+                        <a href="web-dev-using-flask-and-python-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/python2.png" width="140" height="140">
+                <h2>Intermediate python Tutorials in Hindi</h2>
+                <p>
+                    In this series, we will learn about Intermediate/Advanced python Tutorials in Hindi
+                </p>
+                <p>
+                    
+                        <a href="intermediate-python-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/discuss.png" width="140" height="140">
+                <h2>Coding Discussion With Harry</h2>
+                <p>
+                    In this series, we will learn about Coding Discussion With Harry
+                </p>
+                <p>
+                    
+                        <a href="fastest-way-to-become-a-software-developer"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/oop.png" width="140" height="140">
+                <h2>Object Oriented Programming Using Python Programming</h2>
+                <p>
+                    In this series, we will learn about Object Oriented Programming Using Python Programming
+                </p>
+                <p>
+                    
+                        <a href="object-oriented-hindi-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/default.png" width="140" height="140">
+                <h2>General Python Errors In Hindi</h2>
+                <p>
+                    In this series, we will learn about General Python Errors In Hindi
+                </p>
+                <p>
+                    
+                        <a href="general-python-errors-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/php_XAy0Qw7.png" width="140" height="140">
+                <h2>Creating a Realtime PHP Chatroom Using PHP &amp; Jquery</h2>
+                <p>
+                    In this series, we will learn about Creating a Realtime PHP Chatroom Using PHP &amp; Jquery
+                </p>
+                <p>
+                    
+                        <a href="realtime-php-chatroom-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/code.png" width="140" height="140">
+                <h2>Learn In One Video</h2>
+                <p>
+                    In this series, we will learn about Learn In One Video
+                </p>
+                <p>
+                    
+                        <a href="learn-javascript-in-one-video-in-hindi"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/git_a6oiG1D.png" width="140" height="140">
+                <h2>Git and GitHub Tutorials For Beginners In Hindi</h2>
+                <p>
+                    In this series, we will learn about Git and GitHub Tutorials For Beginners In Hindi
+                </p>
+                <p>
+                    
+                        <a href="git-tut-beginners-hindi-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/Python-logo_SuZHKI7.jpg" width="140" height="140">
+                <h2>Python Data Science and Big Data Tutorials In Hindi</h2>
+                <p>
+                    In this series, we will learn about Python Data Science and Big Data Tutorials In Hindi
+                </p>
+                <p>
+                    
+                        <a href="python-big-data-hindi-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/default.png" width="140" height="140">
+                <h2>Basic Python Programs With Code</h2>
+                <p>
+                    In this series, we will learn about Basic Python Programs With Code
+                </p>
+                <p>
+                    
+                        <a href="basic-python-programs-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/cloudai.jpg" width="140" height="140">
+                <h2>Machine Learning Tutorials For Beginners Using Python In Hindi</h2>
+                <p>
+                    In this series, we will learn about Machine Learning Tutorials For Beginners Using Python In Hindi
+                </p>
+                <p>
+                    
+                        <a href="ml-tutorials-in-hindi-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/python.png" width="140" height="140">
+                <h2>Python GUI Tkinter Tutorials In Hindi</h2>
+                <p>
+                    In this series, we will learn about Python GUI Tkinter Tutorials In Hindi
+                </p>
+                <p>
+                    
+                        <a href="python-gui-tkinter-hindi-0"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/js.png" width="140" height="140">
+                <h2>JavaScript Tutorials In Hindi</h2>
+                <p>
+                    In this series, we will learn about JavaScript Tutorials In Hindi
+                </p>
+                <p>
+                    
+                        <a href="javascript-tutorials-in-hindi-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/git_SMHQRfM.png" width="140" height="140">
+                <h2>Complete Git Tutorials For Beginners In Hindi</h2>
+                <p>
+                    In this series, we will learn about Complete Git Tutorials For Beginners In Hindi
+                </p>
+                <p>
+                    
+                        <a href="complete-git-tutorials-in-hindi-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/videoSeries/c_2OXTgR5.png" width="140" height="140">
+                <h2>C Language Practice Programs</h2>
+                <p>
+                    In this series, we will learn about This series contains programs for you to practice C Programming and related concepts
+                </p>
+                <p>
+                    
+                        <a href="c-practice-programs-in-hindi-1"><button class="btn btn-outline-danger">Start Watching »</button></a>
+                    
+                </p>
+            </div>
+        
+    </div>
+</div>
+
+
+
+  <!-- FOOTER -->
+  <footer class="container-fluid bg-dark my-0 py-3 text-light">
+    <p class="mb-0 text-center">&copy; 2020-2021 CodeWithHarry.com</p>
+    <p class="mb-0 text-center">
+      <a href="#">Back to top |</a>
+      <a href="#">Privacy |</a>
+      <a href="#">Terms</a>
+    </p>
+
+  </footer>
+  <!-- Custom JavaScript -->
+  <script src="https://apis.google.com/js/platform.js" defer></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/433888fe69.js" crossorigin="anonymous" defer></script>
+
+  
+</body>
+
+</html>
