@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Phootshop tutorial"> 
+
+  
+  <title>Phootshop tutorial</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+<link href="prism.css" rel="stylesheet">
+  <!-- Google add -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6571704021427318"
+     crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="../css/index.css">
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous">
+</script>
+  <script> 
+    $(function(){
+      $("#header").load("header.html"); 
+      $("#footer").load("footer.html"); 
+    });
+    </script> 
+</head>
+
+<body>
+  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../index.html"><img class="brandLogo" src="../images/logo.jpg" alt="My image"></a>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+    
+            <li class="nav-item font-weight-bold">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+    
+            <li class="nav-item font-weight-bold">
+              <a class="nav-link" href="../video.html">Videos</a>
+            </li>
+    
+            <li class="nav-item font-weight-bold">
+              <a class="nav-link" href="../job.html">Jobs</a>
+            </li>
+    
+            <li class="nav-item font-weight-bold">
+              <a class="nav-link" href="../contact.html">Contact Us</a>
+            </li>
+          </ul>
+    
+
+          
+        </div>
+    
+      </nav>
+      
+     
+  
+
+<!-- Image modal -->
+<!-- Button trigger modal -->
+ 
+
+<!-- Image Preview Modal -->
+<div class="modal fade" id="previewModal" tabindex="-1" role="dialog" aria-labelledby="previewModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="previewModalLabel">Image Preview</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-auto">
+              <img src="" alt="" class="img-fluid" id="modalImage">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <div class="row" id="sticky-d">
+        <!-- Video Holder -->
+        <div class="col-md-9 bg-black px-0" id="video-box">
+            <div class="container videoContainer embed-responsive embed-responsive-16by9 px-3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kan4Y2AYFB8" title="YouTube video player" frameborder="0"
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Course content holder -->
+        <div class="col-md-3 px-0" id="course-content-box">
+            <div class="row mx-0 py-2 px-3 bg-lgrey">
+                <h5> Course Content<i class="mx-2 fas fa-plus" id="toggleCourse"></i></h5>
+                <button id="togglePlayer" class="btn btn-sm btn-danger mx-3">Hide Player</button>
+            </div>
+            <div id="content-box">
+                <ul class="content-holder">
+                    
+                    <a href="page1.html">
+                        <li class="content-holder-item  active">
+                            1. What is Photoshop? || History of Photoshop || How is Photoshop Used? || What is Photoshop CC? || Part 1-1
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+                    
+                    <a href="page2.html">
+                        <li class="content-holder-item  ">
+                            2. What is Photoshop? || History of Photoshop || How is Photoshop Used? || What is Photoshop CC? || Part 1-2
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+                    
+                    <a href="page3.html">
+                        <li class="content-holder-item  ">
+                            3. Photoshop CS 2020 Tutorial in Hindi Part 2 || Adobe Photoshop Hindi Tutorial Part 2
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+                    
+                    <a href="page4.html">
+                        <li class="content-holder-item  ">
+                            4. Photoshop Tutorial in Hindi Part 3 || Adobe Photoshop Tutorial in Hindi- Part 3
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+                    
+                    <a href="page5.html">
+                        <li class="content-holder-item  ">
+                            5.Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 4
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+                    
+                    <a href="page6.html">
+                        <li class="content-holder-item  ">
+                            6. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 5
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+                    
+                    <a href="page7.html">
+                        <li class="content-holder-item  ">
+                            7. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 6
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+                    
+                    <a href="page8.html">
+                        <li class="content-holder-item  ">
+                            8. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020 - Part 7
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+                    
+                    <a href="page9.html">
+                        <li class="content-holder-item  ">
+                            9. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page10.html">
+                        <li class="content-holder-item  ">
+                            10. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page11.html">
+                        <li class="content-holder-item  ">
+                            11. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page12.html">
+                        <li class="content-holder-item  ">
+                            12. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page13.html">
+                        <li class="content-holder-item  ">
+                            13. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page14.html">
+                        <li class="content-holder-item  ">
+                            14. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page15.html">
+                        <li class="content-holder-item  ">
+                            15. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page16.html">
+                        <li class="content-holder-item  ">
+                            16. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page17.html">
+                        <li class="content-holder-item  ">
+                            17. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page18.html">
+                        <li class="content-holder-item  ">
+                            18. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page19.html">
+                        <li class="content-holder-item  ">
+                            19. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page20.html">
+                        <li class="content-holder-item  ">
+                            20. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page21.html">
+                        <li class="content-holder-item  ">
+                            21. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page22.html">
+                        <li class="content-holder-item  ">
+                            22. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page23.html">
+                        <li class="content-holder-item  ">
+                            23. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page24.html">
+                        <li class="content-holder-item  ">
+                            24. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page25.html">
+                        <li class="content-holder-item  ">
+                            25. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page26.html">
+                        <li class="content-holder-item  ">
+                            26. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page27.html">
+                        <li class="content-holder-item  ">
+                            27. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="page28.html">
+                        <li class="content-holder-item  ">
+                            28. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+                    <a href="page29.html">
+                        <li class="content-holder-item  ">
+                            29. Photoshop Tutorial in Hindi Part 4 || Adobe Photoshop 2020- Part 8
+                            <div class="mx-3">
+                                <i class="far fa-play-circle"></i> Free YouTube Video
+                            </div>
+                        </li>
+                    </a>
+
+
+                </ul>
+            </div>
+        </div> 
+        <hr>
+    </div>
+
+    <div class="col-md-9 bg-black px-0" id="video-box2">
+        <div class="other bg-light">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="overview-tab" data-toggle="tab" href="#overview" role="tab"
+                        aria-controls="overview" aria-selected="true">Overview</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="resources-tab" data-toggle="tab" href="#resources" role="tab"
+                        aria-controls="resources" aria-selected="false">Files</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="announcements-tab" data-toggle="tab" href="#announcements" role="tab"
+                        aria-controls="announcements" aria-selected="false">Announcements</a>
+                </li>
+            </ul>
+            
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show mx-4 mt-3 active" id="overview" role="tabpanel"
+                    aria-labelledby="overview-tab">
+    
+                    <div class="container clearfix py-2 px-0">
+                        <h3 class="mb-3">
+    
+                            Autocad tutorial for Beginners
+                        </h3>
+
+
+    <p>Introduction to AutoCAD</p>
+   <p> What is AutoCAD used for?</p>
+
+  <p>  AutoCAD is a commercial computer-aided design (CAD) and drafting software application.</p>
+<p>     Developed and marketed by Autodesk,[1] AutoCAD was first released in December 1982 as a </p>
+    <p> desktop app running on microcomputers with internal graphics controllers.</p>
+     <p>[2] Before AutoCAD was introduced, most commercial CAD programs ran on mainframe computers or minicomputers, </p>
+     <p>with each CAD operator (user) working at a separate graphics terminal.[3] AutoCAD is also available as mobile and web apps.</p>
+
+        
+                        <div class="my-4 d-flex justify-content-between">
+                            
+                            <a class="btn btn-danger" href="#">&larr; Previous </a>
+                            
+    
+                            
+                            <a class="btn btn-danger" href="page2.html">Next &rarr;</a>
+                            
+                        </div>
+                    </div>
+                </div>
+  
+                <div class="tab-pane fade mx-4 mt-3" id="resources" role="tabpanel" aria-labelledby="resources-tab">
+                    <div class="container px-0">
+    
+                        <h4>Resources</h4>
+                        
+                        <ol>
+                            
+                            <li class="my-2">File - <a href="/static/common/uploads/static/common/uploads/py_DSv9e1B.jpg" role="button"
+                                    class="btn btn-sm btn-outline-danger">Download here</a></li>
+                            
+                            <li class="my-2">File - <a href="/static/common/uploads/static/common/uploads/Python-programming-for-hackers-compressed_4OVmWvt.jpg" role="button"
+                                    class="btn btn-sm btn-outline-danger">Download here</a></li>
+                            
+                            <li class="my-2">File - <a href="/static/common/uploads/static/common/uploads/Python-programming-for-hackers-compressed_Q7zJ08k_6DWLszQ.jpg" role="button"
+                                    class="btn btn-sm btn-outline-danger">Download here</a></li>
+                            
+                        </ol>
+                    </div>
+    
+                </div>
+                <div class="tab-pane fade mx-4 mt-3" id="announcements" role="tabpanel" aria-labelledby="announcements-tab">
+                    <div class="container">
+    
+                        <h4>Course Announcements</h4>
+                        <p>
+                            Any Course related announcements will be posted here
+                            
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+  <!-- FOOTER -->
+  <footer class="container-fluid bg-dark my-0 py-3 text-light">
+    <p class="mb-0 text-center">&copy; 2020-2021 Avclass.in</p>
+    <p class="mb-0 text-center">
+      <a href="#">Back to top |</a>
+      <a href="#">Privacy |</a>
+      <a href="#">Terms</a>
+    </p>
+
+  </footer>
+  <!-- Custom JavaScript -->
+  <script src="https://apis.google.com/js/platform.js" defer></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/433888fe69.js" crossorigin="anonymous" defer></script>
+ 
+  
+<script defer src="https://codewithharry.com/static/videoSeries/js/prism.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+<script>
+    function disableScrolling() {
+        console.log("Disable scrolling");
+        let x = window.scrollX;
+        let y = window.scrollY;
+        window.onscroll = function () { window.scrollTo(x, y); };
+    }
+
+    function enableScrolling() {
+        console.log("Enable scrolling");
+        window.onscroll = function () { };
+    }
+
+
+
+</script>
+
+<script>
+    courseContainer = document.querySelector('#content-box');
+    stickyD = document.getElementById('sticky-d')
+    toggleCourse.addEventListener('click', () => {
+        console.log('click');
+        box = document.querySelector('#course-content-box');
+        // Opening the container
+        if (!box.classList.contains('openCourseHeight')) { 
+            courseContainer.style.visibility = 'visible';
+            box.classList.add('openCourseHeight');
+            toggleCourse.classList.add('fa-minus');
+            toggleCourse.classList.remove('fa-plus');
+            stickyD.classList.remove('position-sticky')
+            stickyD.classList.add('position-static')
+            stickyD.scrollIntoView();
+        }
+        else {
+            courseContainer.style.visibility = 'hidden';
+            box.classList.remove('openCourseHeight');
+            toggleCourse.classList.remove('fa-minus');
+            toggleCourse.classList.add('fa-plus');
+            stickyD.classList.remove('position-static')
+            stickyD.classList.add('position-sticky')
+
+        }
+    })
+</script>
+
+<script>
+    // Making all images inside main box responsive and adding border
+    let mainVidBox = document.getElementById('video-box2');
+    Array.from(mainVidBox.getElementsByTagName('img')).forEach((element, ind)=>{
+        element.classList.add('img-fluid')
+        element.classList.add('border');
+        element.classList.add('border-dark'); 
+        element.classList.add('rounded') 
+    });
+
+    // Hide/Show Player
+    togglePlayer.addEventListener('click', ()=>{
+        sd = document.getElementById("sticky-d");
+        vbox = document.getElementById("video-box");
+        if(window.screen.width > 768){
+            if(sd.style.height == ""){
+                sd.style.height = 0; 
+                vbox.style.visibility = "hidden"; 
+                sd.style.display = ""
+                togglePlayer.innerText = "Show Player";
+            }
+            else{
+                sd.style.height = ""; 
+                vbox.style.visibility = "visible";
+                togglePlayer.innerText = "Hide Player";
+            }
+        }
+        // Write the mobile logic for player
+        else{
+            if (vbox.style.display != "none") {
+                vbox.style.display = "none"; 
+                togglePlayer.innerText = "Show Player";
+            }
+            else {
+                vbox.style.display = "block"; 
+                togglePlayer.innerText = "Hide Player";
+            }
+        }
+        
+    })
+
+    // Preview image by clicking logic:
+    imgs = document.getElementsByTagName('img');
+    Array.from(imgs).forEach((element)=>{
+        element.addEventListener('click', (e)=>{
+            console.log("clicked", e.target.src);
+            modalImage.src = e.target.src;
+            $('#previewModal').modal('show')
+        })
+    })
+
+</script> 
+
+</body>
+
+</html>
