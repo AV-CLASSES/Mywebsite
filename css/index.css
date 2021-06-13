@@ -205,3 +205,6 @@ input[type="search"]::-webkit-search-cancel-button:hover {
 .youtube{
   max-width: 150px;
 }
+.jumbotron {
+  padding: 1rem !important;
+}
